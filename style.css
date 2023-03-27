@@ -1,0 +1,595 @@
+ @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&family=MonteCarlo&display=swap');
+
+/* COLOR PALETTE {
+    /* CSS HEX *
+--viridian-green: #0ca4a5ff;
+--orange-yellow: #e3b505ff;
+--persimmon: #f35b04ff;
+--black: #000000ff;
+--white: #ffffffff;
+
+
+/* SCSS Gradient *
+$gradient-top: linear-gradient(0deg, #0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+$gradient-right: linear-gradient(90deg, #0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+$gradient-bottom: linear-gradient(180deg, #0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+$gradient-left: linear-gradient(270deg, #0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+$gradient-top-right: linear-gradient(45deg, #0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+$gradient-bottom-right: linear-gradient(135deg, #0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+$gradient-top-left: linear-gradient(225deg, #0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+$gradient-bottom-left: linear-gradient(315deg, #0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+$gradient-radial: radial-gradient(#0ca4a5ff, #e3b505ff, #f35b04ff, #000000ff, #ffffffff);
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Libre Franklin', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input,
+.btn {
+    outline: none;
+    border: none;
+}
+
+input,
+button,
+button:focus,
+button.active {
+    outline: none;
+}
+
+button {
+    width: 20%;
+    padding: 10px 20px;
+    background-color: #f35b04ff;
+    border-radius: 5px;
+}
+
+a {
+    color: #fff;
+}
+
+button a,
+button:hover a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #000;
+    box-shadow: 2px 2px 2px #0ca4a5ff, 0 0 2px #0ca4a5ff;
+}
+
+/* FONTS SIZE AND HR */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: #e3b505ff;
+    margin-top: -15px;
+}
+
+h6 {
+    font-size: 14px;
+    font-family: 'Libre Franklin', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+}
+
+span {
+    font-size: 23px;
+    font-family: 'MonteCarlo', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+
+/* Logo */
+
+.navbar-brand {
+    width: 15%;
+    max-width: 300px;
+}
+
+.navbar-brand img {
+    width: 100%;
+}
+
+/* Navbar */
+
+.navbar {
+    font-size: 18px;
+    font-family: 'MonteCarlo', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    height: 100px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar #search {
+    color: #fff;
+    padding: 5px 30px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus,
+.navbar #search:hover,
+.quick-links a {
+    color: #0ca4a5ff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar #search:hover {
+    transform: scale(1.3);
+}
+
+.more-post a {
+    color: #000;
+}
+
+#home {
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(225deg, #000000ff, #00000041), url(img/images/6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.heading form {
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.email {
+    width: 80%;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+
+/* Blog-post-page */
+
+.blog .text {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 94.4%;
+    height: 93.5%;
+    background-color: #00000041;
+}
+
+.blog:hover .text {
+    background-color: #00000084;
+}
+
+.blog-img4 {
+    height: 94%;
+}
+
+.text h6 {
+    width: 18%;
+    padding: 10px;
+    height: 35px;
+    background-color: #e3b505ff;
+}
+
+.text p {
+    position: absolute;
+    top: 55%;
+    color: #fff;
+}
+
+.text button {
+    position: absolute;
+    top: 82%;
+    left: 2%;
+    width: 21%;
+    padding: 10px 20px;
+}
+
+.heading2 {
+    color: #000;
+    width: 90%;
+    height: 450px;
+    left: 10%;
+    padding: 20px;
+    box-shadow: 2px 2px 0 0 #00000041, 2px 2px 2px 2px #00000041;
+}
+
+.heading2 .email {
+    border: 1px solid #ccc;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #1f1f1fff;
+}
+
+footer .navbar-brand {
+    width: 100px;
+}
+
+.logo,
+.quick-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+footer p,
+.quick-links a {
+    font-size: 12px;
+    color: #fff;
+}
+
+th,
+tr,
+td {
+    width: 50%;
+    padding: 5px;
+}
+
+td a,
+.more-post a {
+    color: #000;
+}
+
+td a:hover,
+.blog a:hover,
+.more-post a:hover {
+    color: #000;
+}
+
+.faqsection {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+
+.faq-question {
+    color: #000;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 80%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+}
+
+.faq-answer {
+    width: 80%;
+    padding: auto;
+}
+
+.active,
+.faq-question:hover {
+    background-color: #0ca4a5ff;
+}
+
+.faq-answer {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-question:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #000;
+    float: right;
+    margin-left: 5px;
+}
+
+.active.faq-question:after {
+    content: "\2796";
+}
+
+
+/* MOBILE MENUBAR */
+
+.navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+#menubar {
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: 500;
+    color: #0ca4a5ff;
+    cursor: pointer;
+    transition: .3s ease;
+    display: block;
+}
+
+#menubar:hover,
+#menubar:active {
+    color: #fff;
+} 
+
+
+@media only screen and (max-width: 960px) {
+
+    .navbar button
+     {
+        width: 25%;  
+    }
+
+    body>nav>div>button:hover,
+    body>nav>div>button:focus {
+        background-color: #0ca4a5;
+    }
+
+    body>nav>div>button:hover #menubar,
+    body>nav>div>button:focus #menubar {
+        color: #fff;
+    }
+
+    .navbar #menubar ion-icon:hover {
+        color: #fff;
+    }
+
+    .navbar .navbar-nav {
+        background-color: #1f1f1f;
+        height: 60vh;
+    }
+
+    #navbarSupportedContent>ul {
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+    }
+
+    #navbarSupportedContent>ul>li:nth-child(n)>a {
+        padding: 10px 0;
+    }
+
+    .navbar-nav .navlist-icon {
+        display: inline-flex;
+    }
+
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar #search:hover {
+        transform: scale(1.5);
+    }
+
+    .navbar-brand {
+        width: 30%;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .blog .text {
+        width: 91%;
+        height: 91%;
+        background-color: #00000041;
+    }
+
+    button {
+        width: 50%;
+        padding: 10px 30px;
+    }
+
+    .blog .subscribe {
+        width: 30%;
+    }
+
+    .blog-img4 {
+        height: 90%;
+    }
+    
+    .text h6 {
+        width: 23%;
+    }
+    
+    .text p {
+        top: 30%;
+    }
+    
+    .text button {
+        top: 70%;
+    }
+
+    .heading form {
+        width: 100%;
+    }
+
+    .heading2 {
+        height: 550px;
+        left: 20px;
+    }
+
+    #subscribe {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    #subscribe .email {
+        width: 80%;
+        padding: 12px;
+        border-radius: 20px;
+        border: 1px solid #000;
+        }
+
+    #subscribe .subscribe {
+        width: 50%;
+        left: 25%;
+    }
+
+}
+
+
+/* @media only screen and (min-width: 320px) and (max-width: 960px) {
+
+    nav {
+            text-align: center;
+        }
+    
+        .navbar {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            margin-top: -15px;
+            z-index: 1;
+        }
+
+    .navbar-nav {
+        background-color: #1f1f1f;
+        width: 100%;
+        height: 60vh;
+        padding: 20px;
+    }
+
+
+    .logo {
+        width: 60%;
+    }
+
+
+
+    body>nav>div>button:hover,
+    body>nav>div>button:focus {
+        background-color: #0ca4a5;
+    }
+
+    body>nav>div>button:hover #menubar,
+    body>nav>div>button:focus #menubar {
+        color: #fff;
+    }
+
+    .navbar #menubar ion-icon:hover {
+        color: #fff;
+    }
+
+    #navbarSupportedContent>ul {
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+    }
+
+    #navbarSupportedContent>ul>li:nth-child(n)>a {
+        padding: 10px 0;
+    }
+
+    .navbar-nav .navlist-icon {
+        display: inline-flex;
+    }
+
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar #search:hover {
+        transform: scale(1.5);
+    }
+
+    .footer-form {
+        display: block;
+    }
+
+    .email {
+        width: 80%;
+        padding: 12px;
+        border-radius: 20px;
+    }
+
+    .subscribe {
+        position: relative;
+        display: block;
+        width: 50%;
+        padding: 10px;
+        left: 36%;
+    }
+
+    .heading {
+        display: block;
+    }
+
+    .heading h1 {
+        font-size: 20px;
+    }
+
+    .heading .email {
+        width: 100%;
+    }
+
+    .heading .subscribe {
+        width: 50%;
+    }
+
+   button {
+    width: 50%;
+}
+
+    .btn:hover a {
+        color: #fff;
+    }
+
+    .new {
+        width: 230%;
+    }
+
+    .read {
+        margin-top: -10%;
+        margin-left: -10%;
+    }
+
+    .heading2 {
+        width: 100%;
+        left: 0;
+    }
+
+    .heading2 .email {
+        width: 95%;
+    }
+
+    .form {
+        width: 100%;
+        height: 650px;
+        margin: auto;
+    }
+} */ 
